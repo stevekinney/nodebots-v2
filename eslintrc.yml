@@ -9,7 +9,7 @@ parserOptions:
   ecmaVersion: latest
   sourceType: module
 rules:
-  consistent-return: "off"
+  consistent-return: 'off'
 ignorePatterns:
   - .github
   - .nyc_output

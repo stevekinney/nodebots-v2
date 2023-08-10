@@ -6,15 +6,21 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "vitest"
   },
   "author": "Steve Kinney <hello@stevekinney.net>",
   "license": "ISC",
   "dependencies": {
+    "@googleapis/calendar": "^9.1.1",
+    "app-root-path": "^3.1.0",
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
+    "face-api.js": "^0.22.2",
     "johnny-five": "^2.1.0",
     "socket.io": "^4.7.2",
-    "socket.io-client": "^4.7.2"
+    "socket.io-client": "^4.7.2",
+    "systeminformation": "^5.18.15"
   },
   "imports": {
     "#utilities/*.js": "./src/utilities/*.js"
@@ -28,6 +34,7 @@
     "postcss": "^8.4.27",
     "prettier": "^3.0.1",
     "tailwindcss": "^3.3.3",
-    "vite": "^3.2.7"
+    "vite": "^3.2.7",
+    "vitest": "^0.34.1"
   }
 }

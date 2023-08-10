@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  main {
+    @apply h-screen w-screen flex flex-col place-items-center items-center p-10;
+  }
+
+  canvas {
+    @apply absolute;
+  }
+
+  video {
+    @apply absolute;
+  }
+}
+
+.theremin {
+  @apply w-[720px] h-[560px] relative mx-auto;
+}

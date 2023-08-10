@@ -1,6 +1,8 @@
+const rootPath = require('app-root-path');
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.html', './src/**/*.jsx', './src/**/*.js'],
+  content: ['./**/*.{html,js,css}'],
   theme: {
     extend: {},
   },
