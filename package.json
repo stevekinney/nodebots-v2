@@ -1,0 +1,33 @@
+{
+  "name": "nodebots-v2",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Code and examples for Frontend Masters's Nodebots v2 workshop.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "format": "prettier --write ."
+  },
+  "author": "Steve Kinney <hello@stevekinney.net>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "johnny-five": "^2.1.0",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2"
+  },
+  "imports": {
+    "#utilities/*.js": "./src/utilities/*.js"
+  },
+  "devDependencies": {
+    "@types/johnny-five": "^2.1.3",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.46.0",
+    "nodemon": "^3.0.1",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.1",
+    "tailwindcss": "^3.3.3",
+    "vite": "^3.2.7"
+  }
+}
