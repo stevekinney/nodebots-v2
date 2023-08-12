@@ -14,13 +14,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="base.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <title>Buttons and Sockets</title>
+    <title>Rock Paper Scissors</title>
   </head>
   <body>
     <main id="root">
-      <p id="button-status">
-        The button is currently <span class="button-state">off</span>.
-      </p>
+      <p class="instructions">Press a button to play.</p>
+      <div class="game">
+        <div class="player" id="you"></div>
+        <div class="player" id="opponent"></div>
+      </div>
+      <p id="outcome"></p>
     </main>
     <script type="module" src="client.js"></script>
   </body>
