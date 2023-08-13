@@ -8,15 +8,8 @@ board.on('ready', () => {
     pin: 2,
   });
 
-  button.on('press', () => {
-    led.brightness(20);
-  });
-
-  button.on('release', () => {
-    led.fadeOut(500);
-  });
-
-  button.on('hold', () => {
-    led.brightness(led.value + 10);
+  board.repl.inject({
+    button,
+    led,
   });
 });
