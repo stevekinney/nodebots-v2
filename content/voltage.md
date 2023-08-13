@@ -1,4 +1,4 @@
-# Voltange
+# Voltage
 
 Voltage, also known as electric potential difference, is the force that pushes electric current through a circuit. It's like the pressure that pushes water through a pipe.
 
