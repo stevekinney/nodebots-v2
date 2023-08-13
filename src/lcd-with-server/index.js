@@ -19,9 +19,7 @@ board.repl.inject({ lcd });
 lcd.cursor(0, 0).print('Hello,');
 lcd.cursor(1, 2).print('World!');
 
-app.post('/api/update', (req, res) => {
-  res.sendStatus(204);
-});
+// Your code here!
 
 app.listen(PORT, () => {
   console.log('🤖 Express and Johnny-Five are up and running.');
