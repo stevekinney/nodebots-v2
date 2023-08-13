@@ -10,7 +10,7 @@ This workshop uses parts from the [Arduino Starter Kit](https://amzn.to/3OA3Td9)
 
 ## Resources
 
-You can find the [wiring diagrams](./public/diagrams/) from this workshop [here](./public/diagrams/)
+You can find the [wiring diagrams](./public/diagrams/) from this workshop [here](./public/diagrams/).
 
 ## Table of Contents
 
