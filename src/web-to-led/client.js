@@ -1,4 +1,4 @@
-import post from '#utilities/post';
+import post from '../utilities/post';
 
 const lightSwitch = document.querySelector('#lightswitch');
 

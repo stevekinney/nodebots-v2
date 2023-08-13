@@ -12,16 +12,15 @@
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url('../utilities/base.css');
+    </style>
     <link href="style.css" rel="stylesheet" />
     <title>Kaleidoscope</title>
   </head>
-  <body>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"
-      integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="client.js"></script>
-  </body>
+  <body></body>
+  <script type="module">
+    import('p5/lib/p5.min.js');
+  </script>
+  <script src="client.js"></script>
 </html>

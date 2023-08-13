@@ -8,7 +8,7 @@ const clientServer = await createServer({
   resolve: {
     alias: {
       '@': projectRoot.resolve('./src'),
-      '#utilities': projectRoot.resolve('./src/utilities'),
+      '../utilities': projectRoot.resolve('./src/utilities'),
     },
   },
   server: {

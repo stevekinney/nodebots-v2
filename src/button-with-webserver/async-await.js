@@ -1,6 +1,6 @@
 import five from 'johnny-five';
 import express from 'express';
-import createBoard from '#utilities/create-board.js';
+import createBoard from '../utilities/create-board.js';
 
 const app = express();
 const { PORT = 3000 } = process.env;

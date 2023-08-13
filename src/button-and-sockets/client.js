@@ -1,4 +1,4 @@
-import post from '#utilities/post';
+import post from '../utilities/post';
 import io from 'socket.io-client';
 
 const buttonState = document.querySelector('.button-state');

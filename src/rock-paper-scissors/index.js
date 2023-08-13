@@ -51,7 +51,6 @@ io.on('connection', (socket) => {
 
 app.post('/api/light', (req, res) => {
   const { body } = req;
-  console.log(body);
   res.sendStatus(200);
 });
 

@@ -16,28 +16,17 @@
       @import url('../utilities/base.css');
     </style>
     <link href="style.css" rel="stylesheet" />
-    <title>Web Audio</title>
+    <title>Web Serial</title>
   </head>
   <body>
     <main id="root">
-      <div class="flex flex-col gap-8">
-        <div>
-          <label for="frequency" class="block font-semibold text-center">
-            Frequency
-          </label>
-          <input
-            id="frequency"
-            type="range"
-            min="220"
-            max="880"
-            value="440"
-            class="w-full"
-          />
-        </div>
-        <div class="flex gap-4 place-content-center">
-          <button id="play">Play</button>
-          <button id="mute" disabled>Mute</button>
-        </div>
+      <div>
+        <button id="connect">Connect</button>
+        <button id="on" disabled>On</button>
+        <button id="off" disabled>Off</button>
+      </div>
+      <div>
+        <ol id="messages"></ol>
       </div>
     </main>
     <script type="module" src="client.ts"></script>
