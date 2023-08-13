@@ -13,12 +13,30 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    <title>Light Switch</title>
+    <title>Web Audio</title>
   </head>
   <body>
     <main id="root">
-      <button id="lightswitch">Light Switch</button>
+      <div class="flex flex-col gap-8">
+        <div>
+          <label for="frequency" class="block font-semibold text-center">
+            Frequency
+          </label>
+          <input
+            id="frequency"
+            type="range"
+            min="220"
+            max="880"
+            value="440"
+            class="w-full"
+          />
+        </div>
+        <div class="flex gap-4 place-content-center">
+          <button id="play">Play</button>
+          <button id="mute" disabled>Mute</button>
+        </div>
+      </div>
     </main>
-    <script type="module" src="client.js"></script>
+    <script type="module" src="client.ts"></script>
   </body>
 </html>
