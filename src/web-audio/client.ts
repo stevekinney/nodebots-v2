@@ -8,9 +8,12 @@ const osc = new Oscillator(Number(frequency.value));
 
 osc.frequency = Number(frequency.value);
 
+// ❌ Remove me.
 frequency.addEventListener('input', () => {
   osc.frequency = Number(frequency.value);
 });
+
+// ✅ Add me.
 
 play.addEventListener('click', () => {
   play.disabled = true;
