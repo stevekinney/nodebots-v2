@@ -3,6 +3,8 @@ let angle = 360 / symmetry;
 let musicBox;
 let x;
 
+let rotation = 0; // Update this value to rotate the kaleidoscope.
+
 function setup() {
   createCanvas(document.body.clientWidth, document.body.clientHeight);
   angleMode(DEGREES);
@@ -22,7 +24,7 @@ function draw() {
     }
     //animation:
 
-    musicBox = frameCount * 5;
+    musicBox = rotation;
     rotate(musicBox / 18.0);
 
     //drawing shapes

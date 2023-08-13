@@ -13,16 +13,7 @@ const { PORT = 3000 } = process.env;
 
 const board = await createBoard({ repl: false });
 
-const piezo = new five.Piezo(6);
-
-io.on('connection', (socket) => {
-  socket.on('movement', (data) => {
-    const { x } = data;
-    if (x > 0) {
-      piezo.frequency(x, 100);
-    }
-  });
-});
+// Your code goes here!
 
 server.listen(PORT, () => {
   console.log('🤖 Express and Johnny-Five are up and running.');
