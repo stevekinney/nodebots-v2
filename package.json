@@ -19,6 +19,7 @@
     "face-api.js": "^0.22.2",
     "johnny-five": "^2.1.0",
     "p5": "^1.7.0",
+    "rgb-hex": "^4.0.1",
     "socket.io": "^4.7.2",
     "socket.io-client": "^4.7.2",
     "systeminformation": "^5.18.15"
