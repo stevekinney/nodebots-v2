@@ -1,0 +1,19 @@
+@tailwind base;
+
+@layer base {
+  h3 {
+    @apply font-bold text-2xl;
+  }
+}
+
+.player {
+  @apply text-xl;
+}
+
+.game {
+  @apply my-40 flex gap-8;
+}
+
+.game section {
+  @apply border-2 border-gray-400 rounded-lg p-8 w-60 text-center flex flex-col gap-8 items-center place-content-center;
+}

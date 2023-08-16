@@ -14,27 +14,27 @@ const { PORT = 3000 } = process.env;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-await createBoard({ repl: false });
+// await createBoard({ repl: false });
 
-const lose = new five.Led({
-  pin: 13,
-});
+// const lose = new five.Led({
+//   pin: 13,
+// });
 
-const win = new five.Led({
-  pin: 12,
-});
+// const win = new five.Led({
+//   pin: 12,
+// });
 
-const rock = new five.Button({
-  pin: 2,
-});
+// const rock = new five.Button({
+//   pin: 2,
+// });
 
-const scissors = new five.Button({
-  pin: 3,
-});
+// const scissors = new five.Button({
+//   pin: 3,
+// });
 
-const paper = new five.Button({
-  pin: 4,
-});
+// const paper = new five.Button({
+//   pin: 4,
+// });
 
 io.on('connection', (socket) => {
   console.log('🔌 Websocket connection established.');

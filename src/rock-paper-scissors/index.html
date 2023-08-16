@@ -20,12 +20,20 @@
   </head>
   <body>
     <main id="root">
-      <p class="instructions">Press a button to play.</p>
+      <p class="mb-20 text-center instructions">
+        <span class="font-bold">Instructions</span>: Press a button to play.
+      </p>
       <div class="game">
-        <div class="player" id="you"></div>
-        <div class="player" id="opponent"></div>
+        <section>
+          <h3>You</h3>
+          <div class="player" id="you"></div>
+        </section>
+        <section>
+          <h3>Opponent</h3>
+          <div class="player" id="opponent"></div>
+        </section>
       </div>
-      <p id="outcome"></p>
+      <p id="outcome" class="text-xl font-semibold text-center"></p>
     </main>
     <script type="module" src="client.js"></script>
   </body>
