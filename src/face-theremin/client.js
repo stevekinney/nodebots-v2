@@ -51,7 +51,7 @@ video.addEventListener('play', () => {
     y.textContent = facePosition.y;
     expression.textContent = rankExpressions(firstFace);
 
-    // 😌 Your code goes here!
+    socket.emit('face', facePosition, rankExpressions(firstFace));
 
     faceapi.draw.drawDetections(canvas, resizedDetections);
     faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
