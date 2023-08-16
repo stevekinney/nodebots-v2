@@ -14,6 +14,8 @@ board.on('ready', () => {
     pin: 2,
   });
 
+  const led = new five.Led(11);
+
   button.on('down', () => {
     isPressed = true;
   });
@@ -23,6 +25,7 @@ board.on('ready', () => {
   });
 
   app.get('/', (req, res) => {
+    led.toggle();
     res.send(`The button is ${isPressed ? 'pressed' : 'not pressed'}.`);
   });
 
