@@ -13,6 +13,6 @@ socket.on('button', (message) => {
   buttonState.textContent = message;
 });
 
-socket.on('potentiometer', (value, raw) => {
+socket.on('light', (value) => {
   document.body.style.backgroundColor = `rgb(${value}, ${value}, ${value})`;
 });

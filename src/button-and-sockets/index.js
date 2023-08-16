@@ -18,6 +18,11 @@ await createBoard({ repl: false });
 
 const button = new five.Button(2);
 const potentiometer = new five.Sensor('A0');
+const light = new five.Light({
+  pin: 'A1',
+  freq: 500,
+  threshold: 5,
+});
 
 potentiometer.scale([0, 255]);
 
@@ -34,8 +39,13 @@ io.on('connection', (socket) => {
     socket.emit('button', 'up');
   });
 
-  potentiometer.on('change', () => {
-    socket.emit('potentiometer', potentiometer.value, potentiometer.raw);
+  // potentiometer.on('change', () => {
+  //   socket.emit('potentiometer', potentiometer.value, potentiometer.raw);
+  // });
+
+  light.on('change', () => {
+    const { value, raw } = light;
+    socket.emit('light', light.value);
   });
 });
 
