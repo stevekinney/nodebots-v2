@@ -8,8 +8,22 @@ const board = new five.Board({
 });
 
 board.on('ready', () => {
+  let isPressed = false;
+
   const button = new five.Button({
     pin: 2,
+  });
+
+  button.on('down', () => {
+    isPressed = true;
+  });
+
+  button.on('up', () => {
+    isPressed = false;
+  });
+
+  app.get('/', (req, res) => {
+    res.send(`The button is ${isPressed ? 'pressed' : 'not pressed'}.`);
   });
 
   app.listen(PORT, () => {
