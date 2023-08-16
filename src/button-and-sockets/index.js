@@ -16,7 +16,28 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 await createBoard({ repl: false });
 
-// Add in server-side socket.io code here.
+const button = new five.Button(2);
+const potentiometer = new five.Sensor('A0');
+
+potentiometer.scale([0, 255]);
+
+io.on('connection', (socket) => {
+  console.log('🔌 Socket connection established.');
+
+  button.on('down', () => {
+    console.log('👇 Button pressed.');
+    socket.emit('button', 'down');
+  });
+
+  button.on('up', () => {
+    console.log('👆 Button released.');
+    socket.emit('button', 'up');
+  });
+
+  potentiometer.on('change', () => {
+    socket.emit('potentiometer', potentiometer.value, potentiometer.raw);
+  });
+});
 
 server.listen(PORT, () => {
   console.log('🤖 Express and Johnny-Five are up and running.');
