@@ -1,6 +1,12 @@
-# Nodebots v2 — Frontend Masters
+[![Frontend Masters](https://static.frontendmasters.com/assets/brand/logos/full.png)][fem]
 
-This workshop uses parts from the [Arduino Starter Kit](https://amzn.to/3OA3Td9).
+This repo is the code, examples, and diagrams for the [Hardware with Arduino & JavaScript][fem] on Frontend Masters.
+
+[fem]: https://frontendmasters.com/courses/arduino-javascript/
+
+# Hardware with Arduino & JavaScript — Frontend Masters
+
+This courses uses parts from the [Arduino Starter Kit](https://amzn.to/3OA3Td9).
 
 ## Prerequisites
 
@@ -50,3 +56,24 @@ An Arduino cannot run Node.js without a host computer, but there are boards that
 
 - [Beagle Board](https://www.beagleboard.org)
 - [Raspberry Pi](https://www.raspberrypi.com)
+
+### Jonny-Five Troubleshooting
+
+If you receive a `Device or Firmware Error` when you are attempting to run JavaScript code on your board with `node src/blinking-led/index.js`, Jonny-Five might be connecting to the wrong USB device.
+
+1. Use the ArduinoIDE to find the device port in the device dropdown
+2. Pass the port to the Board constructor. For example:
+
+```javascript
+const board = new five.Board({ port: '/dev/tty.usbmodem3101' });
+```
+
+### Displaying Messages from GitHub
+
+This lesson uses ngrok to expose a port on your local computer. The URL is added to a GitHub webhook so the Arduino LCD can display information when actions happen in a respository (like starring the repo). In order to complete this lesson:
+
+1. Install ngrok in your project: `npm i ngrok`
+2. Create a GitHub repository (or use an existing repository)
+3. After starting the express server in the lesson, use `npx ngrok http 3000` to start ngrok
+4. Follow the instructions in the lesson to copy and paste the forwarding URL from ngrock into the GitHub webhook.
+
